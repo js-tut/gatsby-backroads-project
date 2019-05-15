@@ -1,13 +1,28 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
-
-const blog = () => {
+import { graphql } from "gatsby"
+const blog = ({ data }) => {
   return (
     <Layout>
       hello from blog page<Link to="/">back home</Link>
+      <h1>title : {data.site.siteMetadata.title}</h1>
     </Layout>
   )
 }
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        data {
+          age
+        }
+      }
+    }
+  }
+`
 
 export default blog
