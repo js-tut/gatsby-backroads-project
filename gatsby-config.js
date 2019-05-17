@@ -5,7 +5,7 @@ module.exports = {
       "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
     author: "@johndoe",
     data: {
-      name: "name exmaple",
+      name: "john",
       age: 24,
     },
   },
@@ -17,6 +17,8 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
   ],
