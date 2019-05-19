@@ -25,7 +25,6 @@ const getImages = graphql`
 
 const Images = () => {
   const data = useStaticQuery(getImages)
-  console.log(data)
 
   return (
     <Wrapper>
@@ -40,6 +39,9 @@ const Images = () => {
       <article>
         <h3>fluid image/svg</h3>
         <Img fluid={data.fluid.childImageSharp.fluid} />
+        <div className="fluid">
+          <Img fluid={data.fluid.childImageSharp.fluid} />
+        </div>
       </article>
     </Wrapper>
   )
@@ -61,6 +63,9 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1rem;
+  }
+  .fluid {
+    width: 200px;
   }
 `
 
