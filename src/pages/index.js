@@ -22,7 +22,6 @@ export default ({ data }) => (
     <Services />
   </Layout>
 )
-
 export const query = graphql`
   query {
     defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
