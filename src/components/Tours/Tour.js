@@ -1,7 +1,7 @@
 import React from "react"
 
 const Tour = () => {
-  return <div>this is a single tour</div>
+  return <article>this is a single tour</article>
 }
 
 export default Tour
